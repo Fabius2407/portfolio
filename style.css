@@ -1,0 +1,382 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color-primary: #081731;
+  --color-secondary: #01D6BD;
+  --color-tertiary: #abdbe3;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-tertiary);
+    counter-reset: section;
+    font-size: 1.2vw;
+    width: 75%;
+    height: 100%;
+    position: relative;
+    bottom: 5vw;
+}
+
+.numbered-heading::before, .dates, footer p, nav ol, .small-heading, .tech-list, .tab-list {
+    font-size: 0.75em;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color-secondary);
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+/* Screen adjustments */ 
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    p {
+        text-align: center;
+    }
+    body {
+        width: 100%;
+        font-size: 2vw;
+    }
+    nav {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }    
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+    body {
+        width: 100%;
+    }
+    nav {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+
+}
+
+/* Links */ 
+
+a {
+    text-decoration: none;
+    color: var(--color-tertiary);
+}
+
+a:hover {
+    color:var(--color-secondary);
+}
+
+a.job-link {
+    color: var(--color-secondary);
+}
+
+a.job-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Headings */ 
+
+.headings {
+    margin: 5em auto;
+}
+
+.small-heading {
+    font-size: 100%;
+    font-weight: lighter;
+    margin-bottom: 2em;
+}
+
+.big-heading {
+    font-size: 400%;
+}
+
+.numbered-heading {
+    padding: 1em 0;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.numbered-heading::before {
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    margin-right: 1em;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.numbered-heading::after{
+    background: url("images/css/icon-hline.png");
+    content: "";
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-size: 100%;
+    margin-left: 0.5em;
+}
+
+.job-heading {
+    font-weight: lighter;
+    font-size: 16px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    position: relative;
+    bottom: 5px;
+}
+
+
+/* Navigation Menu */ 
+
+/* Display the menu tabs in the upper right hand corner */
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+}
+
+.navigation {
+    float: right;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 4vw;
+}
+
+/* Menu uses numbered headings with leading zero */
+.navigation ol {
+    list-style: inside decimal-leading-zero;
+}
+
+/* Tabs go from left to right */ 
+.navigation li {
+    float: left;
+    padding-right: 1em;
+}
+
+/* Remove space between numbers and links */
+.navigation a {
+    position: relative;
+    right: 0.5em;
+}
+
+/* Sections */ 
+
+section {
+    margin: 20% auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Lists */ 
+
+/* Reset default list styles */ 
+ul, ol {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.tech-list {
+    margin-top: 2em;
+}
+
+.tech-list li {
+    background: url("images/css/icon-arrow.png") left no-repeat;
+    float: left;
+    width: 25%;
+    color: #abdbe3;
+    padding-left: 2em;
+    margin-top: 0.5em;
+}
+
+.tab-content li{
+    background: url("images/css/icon-arrow.png") left no-repeat;
+    font-size: 14px;
+    padding-left: 2em;
+    margin-top: 1em;
+}
+
+/* Tab menu */ 
+
+.tab-list {
+    border-left: thin solid #01D6BD;
+    margin-left: 25%;
+    padding-left: 1.5em;
+    float: left;
+}
+
+.tab-list li:not(:last-child) {
+    padding-bottom: 1em;
+}
+
+.tab-content {
+    margin-left: 45%;
+}
+
+.tab-content:not(.active) {
+    display: none;
+}
+
+.dates {
+    color: var(--color-tertiary);
+}
+
+/* Buttons */ 
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    color: var(--color-secondary);
+}
+
+.tab-button {
+    font-size: 14px;
+    width: 100%;
+    color:var(--color-secondary);
+}
+
+.tab-button:not(.active) {
+    color: #154c79;
+}
+
+/* Images */ 
+
+.image-right {
+    float: right;
+    margin-left: 5em;
+    margin-bottom: 5em;
+}
+
+.image-left {
+    float: left;
+    margin-right: 5em;
+    margin-bottom: 5em;
+}
+
+.shadow {
+    box-shadow: 10px 10px 15px #01D6BD;
+}
+
+.project-pics:not(:last-child) {
+    margin-bottom: 10%;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
+
+
+/* Projects */ 
+
+.content-right {
+    float: right;
+    position: relative;
+    bottom: 450px;
+    right: 150px;
+}
+
+.content-left {
+    float: left;
+    position: relative;
+    bottom: 450px;
+    left: 150px;
+}
+
+.project-heading {
+    position: relative;
+    bottom: 50px;
+    font-weight: lighter;
+}
+
+.description-box {
+    border: 1px solid var(--color-secondary);
+    width: 500px;
+    height: 100px;
+    background-color: #081731;
+}
+
+.description {
+    font-size: 14px;
+    margin: 2em 2em;
+}
+
+
+/* Forms */ 
+
+.contact-container {
+    margin-top: 2em;
+}
+
+.contact-form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.mail-box {
+    display: inherit;
+    flex-flow: inherit;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 1em;
+}
+
+#email {
+    margin-bottom: 1em;
+    align-self: center;
+}
+
+input {
+    height:2em;
+    font-size: inherit;
+    font: inherit;
+}
+
+textarea {
+    font-size: inherit;
+    font: inherit;
+}
+
+legend {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+input[type=submit]{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    cursor: pointer;
+    border: none;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin: 1em;
+}

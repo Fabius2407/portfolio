@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>fabius gasber - front end developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap" rel="stylesheet">        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="portfolio.js" defer></script>
+    </head>
+    <body>
+        <div class="sticky">
+            <nav class="navigation">
+                <ol>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>   
+                </ol>
+            </nav>
+        </div>
+        <div class="headings">
+            <h1 class="small-heading">hi, my name is</h1>
+            <h2 class="big-heading">fabius gasber.</h2>
+            <h3 class="big-heading">i am a front-end developer.</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ducimus. 
+            Facilis sapiente debitis magnam officiis laboriosam illo ipsam asperiores, 
+            cupiditate dolores maxime! Quidem ullam officiis dicta numquam eveniet vitae consequatur.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui voluptate culpa totam id, distinctio quod! 
+            Et molestias, error cupiditate cumque nam harum hic dolore voluptatum. 
+            Necessitatibus deleniti ratione inventore numquam!</p>
+        <section id="about">
+            <h2 class="numbered-heading">about me</h2>
+            <div>
+            <aside>
+                <figure>
+                    <img class="image-right shadow" src="images/myself.jpg" alt="A picture of myself" width="350" height="353"/>
+                </figure>
+            </aside>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit unde doloribus sapiente ipsum? 
+                Totam dignissimos suscipit voluptas soluta? Architecto voluptatibus at illo aut 
+                itaque eius assumenda impedit sed ea. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quo eius ipsa facere earum, aut, totam esse reiciendis nostrum labore, veritatis omnis dolorem magni temporibus. 
+                Repellendus ut veniam eum porro reiciendis.</p>
+
+                <p>some technologies i've been working with:</p>
+                <ul class="tech-list">
+                    <li>java</li>
+                    <li>pandas</li>
+                    <li>wordpress</li>
+                    <li>javascript</li>
+                    <li>python</li>
+                    <li>numpy</li>
+                    <li>html</li>
+                </ul>
+            </div>
+        </section>
+        <section id="experience">
+            <h2 class="numbered-heading">where i've worked</h2>
+        <div class="tab-container">
+            <div>
+            <ul class="tab-list">
+                <li><button class="tab-button active" id="tab-button-1">sky</button></li>
+                <li><button class="tab-button" id="tab-button-2">lmu</button></li>
+                <li><button class="tab-button" id="tab-button-3">tu ilmenau</button></li>
+            </ul>
+            </div>
+            <div class="tab-content active" id="tab-content-1">
+                <h3 class="job-heading">working student @ <a class="job-link" href="https://www.sky.de" target="_blank">sky</a></h3>
+                <p class="dates">01.01.1970 - 01.01.1970</p>
+                <ul>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="tab-content-2">
+                <h3 class="job-heading">student @ <a class="job-link" href="https://www.lmu.de/de/index.html" target="_blank">lmu</a></h3>
+                <p class="dates">01.01.1970 - 01.01.1970</p>
+                <ul>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="tab-content-3">
+                <h3 class="job-heading">student @ <a class="job-link" href="https://www.tu-ilmenau.de" target="_blank">tu ilmenau</a></h3>
+                <p class="dates">01.01.1970 - 01.01.1970</p>
+                <ul>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                    <li>placeholder</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+        <section id="projects">
+            <h2 class="numbered-heading">stuff i've built</h2>
+            
+        <div>
+            <figure class="project-pics">
+                <a class="image-left" href="placeholder.com"><img src="https://via.placeholder.com/500"></a>
+            </figure>
+            <div class="content-right">
+            <h3 class="project-heading right">Project heading</h3>
+            <div class="description-box">
+                <p class="description">This is a description of my project</p>
+            </div>
+            </div>           
+        </div>
+            <div>
+                <figure class="project-pics">
+                    <a class="image-right" href="placeholder.com"><img src="https://via.placeholder.com/500"></a>
+                </figure>
+                <div class="content-left">
+                <h3 class="project-heading left">Project heading</h3>
+                <div class="description-box">
+                    <p class="description">This is a description of my project</p>
+                </div>
+                </div>
+            </div>
+                
+            <div>
+                <figure class="project-pics">
+                    <a class="image-left" href="placeholder.com"><img src="https://via.placeholder.com/500"></a>
+                </figure>
+                <div class="content-right">
+                <h3 class="project-heading right">Project heading</h3>
+                <div class="description-box">
+                    <p class="description">This is a description of my project</p>
+                </div>
+                </div>
+            </div>
+            </section>
+
+        <section id="contact">
+            <h2 class="numbered-heading">get in touch</h2>
+        <div class="contact-container">
+            <form action="action_page.php" method="post">
+                <fieldset>
+                    <legend><p>Do not hesitate to reach out. </p>
+                            <p>Complete the form or just call me under 015128709091</p>
+                    </legend>
+                    <div class="contact-form">
+                        <div class="row">
+                            <div class="col"> 
+                                <input type="text" name="firstName" placeholder="First Name*" required>
+                            </div>
+                            <div class="col"> 
+                                <input type="text" name="lastName" placeholder="Last Name*" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"> 
+                                <input type="text" name="company" placeholder="Company*" required>
+                            </div>
+                            <div class="col"> 
+                                <input type="text" name="position" placeholder="Position*" required>
+                            </div>
+                        </div>
+                        <div class="mail-box">
+                            <input id="email" type="email" name="email" placeholder="E-Mail*" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject*" required>
+                            <textarea id="message" placeholder="Enter your message here*" rows="10" cols="60"></textarea>
+                        </div>
+                    <input type="submit" value="Submit"/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        </section>
+    </body>
+    <footer>
+        <p>Designed & Built by Fabius Gasber</p>
+    </footer>
+</html>
